@@ -39,6 +39,20 @@ export const routes: Routes = [
 			import('./pages/teams/teams.component').then((m) => m.TeamsComponent),
 	},
 	{
+		path: 'team-profile',
+		data: {
+			meta: {
+				...buildRouteMeta(companyProfile, '/team-profile'),
+				title: 'Team Profile',
+				description: 'CS2 team profile with roster, manager, money, articles, games, and tournaments.',
+			},
+		},
+		loadComponent: () =>
+			import('./pages/team-profile/team-profile.component').then(
+				(m) => m.TeamProfileComponent,
+			),
+	},
+	{
 		path: 'profile',
 		data: {
 			meta: {
