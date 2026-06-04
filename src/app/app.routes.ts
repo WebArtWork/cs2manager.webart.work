@@ -27,6 +27,18 @@ export const routes: Routes = [
 			import('./pages/worlds/worlds.component').then((m) => m.WorldsComponent),
 	},
 	{
+		path: 'teams',
+		data: {
+			meta: {
+				...buildRouteMeta(companyProfile, '/teams'),
+				title: 'Teams',
+				description: 'Create and review local CS2 teams before API integration.',
+			},
+		},
+		loadComponent: () =>
+			import('./pages/teams/teams.component').then((m) => m.TeamsComponent),
+	},
+	{
 		path: 'profile',
 		data: {
 			meta: {

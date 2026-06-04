@@ -12,7 +12,7 @@ import { TopbarComponent } from './layouts/topbar/topbar.component';
 	imports: [RouterOutlet, TopbarComponent, FooterComponent],
 	template: `
 		<div class="flex min-h-screen flex-col">
-			<app-topbar />
+			<app-topbar ngSkipHydration />
 			<main class="flex-1">
 				<router-outlet />
 			</main>
