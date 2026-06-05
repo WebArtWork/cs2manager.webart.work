@@ -7,12 +7,6 @@ export interface NavigationLink {
 
 export const primaryNavigationLinks: readonly NavigationLink[] = [
 	{
-		ariaLabel: 'Go to homepage',
-		icon: 'home',
-		label: 'Landing',
-		path: '/',
-	},
-	{
 		ariaLabel: 'Profile',
 		icon: 'person',
 		label: 'Profile',
@@ -22,7 +16,7 @@ export const primaryNavigationLinks: readonly NavigationLink[] = [
 		ariaLabel: 'Worlds',
 		icon: 'public',
 		label: 'Worlds',
-		path: '/worlds',
+		path: '/',
 	},
 	{
 		ariaLabel: 'Teams',

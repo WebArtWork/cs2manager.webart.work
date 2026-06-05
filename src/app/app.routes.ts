@@ -8,23 +8,17 @@ export const routes: Routes = [
 		data: {
 			meta: {
 				...buildRouteMeta(companyProfile, '/'),
-				titleSuffix: '',
-			},
-		},
-		loadComponent: () =>
-			import('./pages/landing/landing.component').then((m) => m.LandingComponent),
-	},
-	{
-		path: 'worlds',
-		data: {
-			meta: {
-				...buildRouteMeta(companyProfile, '/worlds'),
 				title: 'Worlds',
 				description: 'Create CS2 Manager worlds for tactical esports seasons, teams, tournaments, and map strategy planning.',
 			},
 		},
 		loadComponent: () =>
 			import('./pages/worlds/worlds.component').then((m) => m.WorldsComponent),
+	},
+	{
+		path: 'worlds',
+		redirectTo: '',
+		pathMatch: 'full',
 	},
 	{
 		path: 'teams',
