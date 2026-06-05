@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="Team badge">
+	<rect width="320" height="320" rx="48" fill="#111827"/>
+	<path d="M160 34 269 78v82c0 72-43 116-109 138C94 276 51 232 51 160V78L160 34z" fill="#1f6feb"/>
+	<path d="M160 64 238 96v62c0 51-29 82-78 101-49-19-78-50-78-101V96l78-32z" fill="#0b1120"/>
+	<path d="M107 152h106v24H107zM126 112h68v24h-68zM126 192h68v24h-68z" fill="#e5e7eb"/>
+	<path d="M160 84v152" stroke="#f59e0b" stroke-width="12" stroke-linecap="round"/>
+</svg>
