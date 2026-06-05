@@ -1,0 +1,60 @@
+<section class="mx-auto w-full max-w-[var(--container)] px-4 py-8 sm:px-6 sm:py-12">
+	<div class="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+		<div>
+			<p class="text-xs font-semibold uppercase text-[var(--c-text-muted)]">Tournaments</p>
+			<h1 class="mt-2 text-3xl font-semibold text-[var(--c-text-strong)] sm:text-4xl">
+				Tournament management
+			</h1>
+			<p class="mt-3 max-w-2xl text-base leading-7 text-[var(--c-text)]">
+				Create and review local CS2 tournaments before the API connection is added.
+			</p>
+		</div>
+
+		<wbutton type="primary" (wClick)="openCreateTournament()">
+			<span class="material-symbols-outlined text-[20px]" aria-hidden="true">add</span>
+			<span>Create tournament</span>
+		</wbutton>
+	</div>
+
+	<div class="mt-8 rounded-[var(--radius-card)] border border-[var(--c-border)] bg-[var(--c-bg-secondary)]">
+		<div class="flex items-center justify-between border-b border-[var(--c-border)] px-4 py-3 sm:px-5">
+			<h2 class="text-base font-semibold text-[var(--c-text-strong)]">Created tournaments</h2>
+			<span class="text-sm text-[var(--c-text-muted)]">{{ tournamentCount() }} total</span>
+		</div>
+
+		@if (tournaments().length) {
+			<ul class="divide-y divide-[var(--c-border)]">
+				@for (tournament of tournaments(); track tournament.id) {
+					<li>
+						<a
+							class="theme-interactive theme-focus flex items-center gap-4 px-4 py-4 hover:bg-[var(--c-bg-tertiary)] sm:px-5"
+							[routerLink]="['/tournaments', tournament.id]"
+						>
+						<div
+							class="flex h-10 w-10 items-center justify-center rounded-[var(--radius-card)] bg-[var(--c-bg-primary)] text-sm font-semibold text-[var(--c-text-strong)]"
+						>
+							{{ tournament.name.slice(0, 1).toUpperCase() }}
+						</div>
+						<div class="min-w-0">
+							<p class="truncate font-medium text-[var(--c-text-strong)]">
+								{{ tournament.name }}
+							</p>
+							<p class="text-sm text-[var(--c-text-muted)]">Static local tournament</p>
+						</div>
+						<span class="material-symbols-outlined ml-auto text-[20px] text-[var(--c-text-muted)]" aria-hidden="true">
+							chevron_right
+						</span>
+						</a>
+					</li>
+				}
+			</ul>
+		} @else {
+			<div class="px-4 py-10 text-center sm:px-5">
+				<p class="font-medium text-[var(--c-text-strong)]">No tournaments yet</p>
+				<p class="mt-2 text-sm text-[var(--c-text-muted)]">
+					Create the first tournament to see it in this list.
+				</p>
+			</div>
+		}
+	</div>
+</section>

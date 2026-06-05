@@ -38,7 +38,7 @@ interface Tournament {
 })
 export class TeamProfileComponent {
 	protected readonly team = {
-		fullName: 'Kyiv Falcons',
+		fullName: 'Navi',
 		pictureSrc: 'profile/team-badge.svg',
 		country: {
 			name: 'Ukraine',
@@ -97,12 +97,12 @@ export class TeamProfileComponent {
 	];
 	protected readonly articles: Article[] = [
 		{
-			title: 'Kyiv Falcons announce a refreshed practice schedule',
+			title: 'Navi announce a refreshed practice schedule',
 			source: 'CS2 Manager Daily',
 			date: 'Jun 1',
 		},
 		{
-			title: 'Falcons focus on economy control before qualifier run',
+			title: 'Navi focus on economy control before qualifier run',
 			source: 'Tactical Round',
 			date: 'May 28',
 		},
@@ -117,7 +117,7 @@ export class TeamProfileComponent {
 			date: 'May 20',
 		},
 		{
-			title: 'Kyiv Falcons extend bootcamp ahead of summer events',
+			title: 'Navi extend bootcamp ahead of summer events',
 			source: 'Counter Press',
 			date: 'May 16',
 		},

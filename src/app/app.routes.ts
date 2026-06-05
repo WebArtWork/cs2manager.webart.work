@@ -39,6 +39,34 @@ export const routes: Routes = [
 			import('./pages/teams/teams.component').then((m) => m.TeamsComponent),
 	},
 	{
+		path: 'tournaments',
+		data: {
+			meta: {
+				...buildRouteMeta(companyProfile, '/tournaments'),
+				title: 'Tournaments',
+				description: 'Create and review local CS2 tournaments before API integration.',
+			},
+		},
+		loadComponent: () =>
+			import('./pages/tournaments/tournaments.component').then(
+				(m) => m.TournamentsComponent,
+			),
+	},
+	{
+		path: 'tournaments/:id',
+		data: {
+			meta: {
+				...buildRouteMeta(companyProfile, '/tournaments'),
+				title: 'Tournament',
+				description: 'CS2 tournament overview with start time, end time, teams, and winners.',
+			},
+		},
+		loadComponent: () =>
+			import('./pages/tournament/tournament.component').then(
+				(m) => m.TournamentComponent,
+			),
+	},
+	{
 		path: 'team-profile',
 		data: {
 			meta: {

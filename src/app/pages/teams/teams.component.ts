@@ -19,7 +19,7 @@ export class TeamsComponent {
 	protected readonly teams = signal<Team[]>([
 		{
 			id: 1,
-			name: 'Kyiv Falcons',
+			name: 'Navi',
 		},
 		{
 			id: 2,

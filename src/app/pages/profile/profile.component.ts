@@ -28,7 +28,7 @@ export class ProfileComponent {
 		money: 125000,
 	};
 	protected readonly team = {
-		fullName: 'Kyiv Falcons',
+		fullName: 'Navi',
 		pictureSrc: 'profile/team-badge.svg',
 		country: {
 			name: 'Ukraine',
