@@ -9,8 +9,8 @@ export const environment: {
 	apiUrl: 'https://it.webart.work',
 	appVersion: '1.0.0',
 	production: true,
-	companyId: 'demo',
-	defaultLanguage: 'ua',
+	companyId: 'cs2-manager',
+	defaultLanguage: 'en',
 	languages: [
 		{
 			code: 'ua',

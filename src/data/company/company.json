@@ -1,8 +1,62 @@
 {
-  "_id": "",
-  "name": "Web Art Work",
-  "title": "Web Art Work",
-  "description": "Web and mobile app development, IT education, internships, and digital solutions for businesses.",
-  "image": "https://ngx.webart.work/logo.png",
-	"siteUrl": "https://ngx.webart.work"
+	"_id": "cs2-manager",
+	"name": "CS2 Manager",
+	"title": "CS2 Manager",
+	"description": "Create your team, manage players, plan tactics, control maps, and become the best CS2 manager in a tactical esports strategy game.",
+	"image": "https://cs2manager.webart.work/logo.png",
+	"siteUrl": "https://cs2manager.webart.work",
+	"lang": "en",
+	"locale": "en_US",
+	"logo": "https://cs2manager.webart.work/logo.png",
+	"defaultSeo": {
+		"title": "CS2 Manager − Build and lead your tactical team",
+		"description": "Create your team, manage players, plan tactics, control maps, and become the best CS2 manager in a tactical esports strategy game.",
+		"keywords": [
+			"CS2 Manager",
+			"CS2 game",
+			"esports manager",
+			"tactical game",
+			"team manager",
+			"CS2 tactics",
+			"shooter strategy",
+			"map strategy",
+			"esports team",
+			"CS2 simulator",
+			"manager game",
+			"Dustline map"
+		],
+		"author": "CS2 Manager",
+		"robots": "index, follow",
+		"image": "https://cs2manager.webart.work/logo.png",
+		"type": "website",
+		"twitterCard": "summary_large_image"
+	},
+	"pageSeo": {
+		"/": {
+			"title": "CS2 Manager − Build and lead your tactical team",
+			"description": "Create your team, manage players, plan tactics, control maps, and become the best CS2 manager in a tactical esports strategy game.",
+			"keywords": [
+				"CS2 Manager",
+				"CS2 game",
+				"esports manager",
+				"tactical game",
+				"team manager",
+				"CS2 tactics",
+				"shooter strategy",
+				"map strategy",
+				"esports team",
+				"CS2 simulator",
+				"manager game",
+				"Dustline map"
+			],
+			"canonicalPath": "/"
+		}
+	},
+	"structuredData": {
+		"type": "SoftwareApplication",
+		"custom": {
+			"applicationCategory": "GameApplication",
+			"operatingSystem": "Web"
+		}
+	}
 }

@@ -20,7 +20,7 @@ export const routes: Routes = [
 			meta: {
 				...buildRouteMeta(companyProfile, '/worlds'),
 				title: 'Worlds',
-				description: 'Create and review local worlds before API integration.',
+				description: 'Create CS2 Manager worlds for tactical esports seasons, teams, tournaments, and map strategy planning.',
 			},
 		},
 		loadComponent: () =>
@@ -32,7 +32,7 @@ export const routes: Routes = [
 			meta: {
 				...buildRouteMeta(companyProfile, '/teams'),
 				title: 'Teams',
-				description: 'Create and review local CS2 teams before API integration.',
+				description: 'Build your CS2 esports team, manage players, and prepare the roster for tactical competition.',
 			},
 		},
 		loadComponent: () =>
@@ -44,7 +44,7 @@ export const routes: Routes = [
 			meta: {
 				...buildRouteMeta(companyProfile, '/tournaments'),
 				title: 'Tournaments',
-				description: 'Create and review local CS2 tournaments before API integration.',
+				description: 'Organize CS2 tournaments, track teams, and compete to become the best tactical esports manager.',
 			},
 		},
 		loadComponent: () =>
@@ -58,7 +58,7 @@ export const routes: Routes = [
 			meta: {
 				...buildRouteMeta(companyProfile, '/tournaments'),
 				title: 'Tournament',
-				description: 'CS2 tournament overview with start time, end time, teams, and winners.',
+				description: 'Review a CS2 Manager tournament with teams, timing, winners, and tactical esports results.',
 			},
 		},
 		loadComponent: () =>
@@ -72,7 +72,7 @@ export const routes: Routes = [
 			meta: {
 				...buildRouteMeta(companyProfile, '/gameplay'),
 				title: 'Gameplay',
-				description: 'CS2 gameplay overview with map, score, teams, players, economy, HP, weapons, armor, and grenades.',
+				description: 'Plan CS2 tactics across maps, scorelines, teams, players, economy, weapons, armor, and grenades.',
 			},
 		},
 		loadComponent: () =>
@@ -86,7 +86,7 @@ export const routes: Routes = [
 			meta: {
 				...buildRouteMeta(companyProfile, '/team-profile'),
 				title: 'Team Profile',
-				description: 'CS2 team profile with roster, manager, money, articles, games, and tournaments.',
+				description: 'Inspect your CS2 team profile, roster, manager, finances, match history, and tournament progress.',
 			},
 		},
 		loadComponent: () =>
@@ -100,7 +100,7 @@ export const routes: Routes = [
 			meta: {
 				...buildRouteMeta(companyProfile, '/profile'),
 				title: 'Profile',
-				description: 'CS2 manager profile with team, members, countries, and finances.',
+				description: 'Manage your CS2 Manager profile, team identity, player countries, and tactical esports finances.',
 			},
 		},
 		loadComponent: () =>
