@@ -26,59 +26,18 @@
 
 		<div class="flex items-center gap-2">
 			<nav class="flex items-center gap-2" aria-label="Primary">
-				<a
-					aria-label="Profile"
-					class="theme-interactive theme-focus inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--c-border)] bg-[var(--c-bg-primary)] text-sm font-semibold text-[var(--c-text-strong)] hover:bg-[var(--c-bg-tertiary)] sm:w-auto sm:gap-2 sm:px-4"
-					routerLink="/profile"
-				>
-					<span class="material-symbols-outlined text-[20px]" aria-hidden="true">person</span>
-					<span class="hidden sm:inline">Profile</span>
-				</a>
-
-				<a
-					aria-label="Worlds"
-					class="theme-interactive theme-focus inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--c-border)] bg-[var(--c-bg-primary)] text-sm font-semibold text-[var(--c-text-strong)] hover:bg-[var(--c-bg-tertiary)] sm:w-auto sm:gap-2 sm:px-4"
-					routerLink="/worlds"
-				>
-					<span class="material-symbols-outlined text-[20px]" aria-hidden="true">public</span>
-					<span class="hidden sm:inline">Worlds</span>
-				</a>
-
-				<a
-					aria-label="Teams"
-					class="theme-interactive theme-focus inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--c-border)] bg-[var(--c-bg-primary)] text-sm font-semibold text-[var(--c-text-strong)] hover:bg-[var(--c-bg-tertiary)] sm:w-auto sm:gap-2 sm:px-4"
-					routerLink="/teams"
-				>
-					<span class="material-symbols-outlined text-[20px]" aria-hidden="true">groups</span>
-					<span class="hidden sm:inline">Teams</span>
-				</a>
-
-				<a
-					aria-label="Tournaments"
-					class="theme-interactive theme-focus inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--c-border)] bg-[var(--c-bg-primary)] text-sm font-semibold text-[var(--c-text-strong)] hover:bg-[var(--c-bg-tertiary)] sm:w-auto sm:gap-2 sm:px-4"
-					routerLink="/tournaments"
-				>
-					<span class="material-symbols-outlined text-[20px]" aria-hidden="true">trophy</span>
-					<span class="hidden sm:inline">Tournaments</span>
-				</a>
-
-				<a
-					aria-label="Gameplay"
-					class="theme-interactive theme-focus inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--c-border)] bg-[var(--c-bg-primary)] text-sm font-semibold text-[var(--c-text-strong)] hover:bg-[var(--c-bg-tertiary)] sm:w-auto sm:gap-2 sm:px-4"
-					routerLink="/gameplay"
-				>
-					<span class="material-symbols-outlined text-[20px]" aria-hidden="true">sports_esports</span>
-					<span class="hidden sm:inline">Gameplay</span>
-				</a>
-
-				<a
-					aria-label="Team profile"
-					class="theme-interactive theme-focus inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--c-border)] bg-[var(--c-bg-primary)] text-sm font-semibold text-[var(--c-text-strong)] hover:bg-[var(--c-bg-tertiary)] sm:w-auto sm:gap-2 sm:px-4"
-					routerLink="/team-profile"
-				>
-					<span class="material-symbols-outlined text-[20px]" aria-hidden="true">shield</span>
-					<span class="hidden sm:inline">Team</span>
-				</a>
+				@for (page of pageLinks; track page.path) {
+					<a
+						class="theme-interactive theme-focus inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--c-border)] bg-[var(--c-bg-primary)] text-sm font-semibold text-[var(--c-text-strong)] hover:bg-[var(--c-bg-tertiary)] sm:w-auto sm:gap-2 sm:px-4"
+						[routerLink]="page.path"
+						[translate]="{ ariaLabel: page.ariaLabel }"
+					>
+						<span class="material-symbols-outlined text-[20px]" aria-hidden="true">
+							{{ page.icon }}
+						</span>
+						<span class="hidden sm:inline" [translate]="page.label"></span>
+					</a>
+				}
 			</nav>
 
 			<div

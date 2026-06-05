@@ -6,6 +6,7 @@ import { ThemeService } from '@wawjs/ngx-ui';
 import type { Language } from '@wawjs/ngx-translate';
 import type { AppLanguage } from '../../../environments/environment.prod';
 import { CompanyService } from '../../feature/company/company.service';
+import { primaryNavigationLinks } from '../navigation-links';
 
 @Component({
 	selector: 'app-topbar',
@@ -27,6 +28,7 @@ export class TopbarComponent {
 		this._languageService.languages().map((language) => _toAppLanguage(language)),
 	);
 	protected readonly company = this._companyService.company;
+	protected readonly pageLinks = primaryNavigationLinks.filter((link) => link.path !== '/');
 	protected readonly activeLanguage = this._languageService.language;
 	protected readonly currentLanguage = computed(() =>
 		_toAppLanguage(this._languageService.getLanguage(this.activeLanguage())),

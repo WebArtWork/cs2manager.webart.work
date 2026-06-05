@@ -40,14 +40,17 @@
 			</p>
 			<nav [translate]="{ ariaLabel: 'Pages footer navigation' }">
 				<ul class="space-y-3">
-
-					@for (page of pageLinks(); track page.path) {
+					@for (page of pageLinks; track page.path) {
 						<li>
 							<a
-								class="theme-focus inline-flex rounded-md text-base font-medium text-[var(--c-text-strong)] transition-colors duration-150 hover:text-[var(--c-primary)]"
+								class="theme-focus inline-flex items-center gap-2 rounded-md text-base font-medium text-[var(--c-text-strong)] transition-colors duration-150 hover:text-[var(--c-primary)]"
 								[routerLink]="page.path"
-								[translate]="page.label"
+								[translate]="{ ariaLabel: page.ariaLabel }"
 							>
+								<span class="material-symbols-outlined text-[20px]" aria-hidden="true">
+									{{ page.icon }}
+								</span>
+								<span [translate]="page.label"></span>
 							</a>
 						</li>
 					}
