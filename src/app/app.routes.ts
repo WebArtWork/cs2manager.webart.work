@@ -67,6 +67,20 @@ export const routes: Routes = [
 			),
 	},
 	{
+		path: 'gameplay',
+		data: {
+			meta: {
+				...buildRouteMeta(companyProfile, '/gameplay'),
+				title: 'Gameplay',
+				description: 'CS2 gameplay overview with map, score, teams, players, economy, HP, weapons, armor, and grenades.',
+			},
+		},
+		loadComponent: () =>
+			import('./pages/gameplay/gameplay.component').then(
+				(m) => m.GameplayComponent,
+			),
+	},
+	{
 		path: 'team-profile',
 		data: {
 			meta: {
