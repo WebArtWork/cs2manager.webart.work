@@ -16,6 +16,31 @@
 		</wbutton>
 	</div>
 
+	<div class="mt-8 rounded-[var(--radius-card)] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] p-5 sm:p-6">
+		<div class="grid gap-5 sm:grid-cols-[8rem_minmax(0,1fr)] sm:items-center">
+			<img
+				class="h-28 w-28 rounded-[var(--radius-card)] border border-[var(--c-border)] object-cover"
+				[ngSrc]="featuredTeam.pictureSrc"
+				[alt]="featuredTeam.name"
+				width="112"
+				height="112"
+			/>
+
+			<div>
+				<p class="text-sm text-[var(--c-text-muted)]">Featured team</p>
+				<h2 class="mt-1 text-2xl font-semibold text-[var(--c-text-strong)]">{{ featuredTeam.name }}</h2>
+				<dl class="mt-4 grid gap-4 sm:grid-cols-3">
+					@for (stat of featuredTeam.stats; track stat.label) {
+						<div>
+							<dt class="text-sm text-[var(--c-text-muted)]">{{ stat.label }}</dt>
+							<dd class="mt-1 font-semibold text-[var(--c-text-strong)]">{{ stat.value }}</dd>
+						</div>
+					}
+				</dl>
+			</div>
+		</div>
+	</div>
+
 	<div class="mt-8 rounded-[var(--radius-card)] border border-[var(--c-border)] bg-[var(--c-bg-secondary)]">
 		<div class="flex items-center justify-between border-b border-[var(--c-border)] px-4 py-3 sm:px-5">
 			<h2 class="text-base font-semibold text-[var(--c-text-strong)]">Created teams</h2>

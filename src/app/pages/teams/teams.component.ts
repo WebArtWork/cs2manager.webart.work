@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { ButtonComponent, ModalService } from '@wawjs/ngx-ui';
 import { TeamFormModalComponent } from './team-form-modal.component';
@@ -7,8 +8,13 @@ interface Team {
 	name: string;
 }
 
+interface TeamStat {
+	label: string;
+	value: string;
+}
+
 @Component({
-	imports: [ButtonComponent],
+	imports: [ButtonComponent, NgOptimizedImage],
 	templateUrl: './teams.component.html',
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -30,6 +36,24 @@ export class TeamsComponent {
 			name: 'Ancient Five',
 		},
 	]);
+	protected readonly featuredTeam = {
+		name: 'Navi',
+		pictureSrc: 'profile/team-badge.svg',
+		stats: [
+			{
+				label: 'World rank',
+				value: '#4',
+			},
+			{
+				label: 'Current form',
+				value: '8 wins / 2 losses',
+			},
+			{
+				label: 'Fan base',
+				value: '1.4M fans',
+			},
+		] satisfies TeamStat[],
+	};
 	protected readonly teamCount = computed(() => this.teams().length);
 
 	protected openCreateTeam() {

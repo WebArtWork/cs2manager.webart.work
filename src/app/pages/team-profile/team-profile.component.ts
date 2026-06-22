@@ -12,6 +12,11 @@ interface TeamMember {
 	country: Country;
 }
 
+interface TeamStat {
+	label: string;
+	value: string;
+}
+
 interface Article {
 	title: string;
 	source: string;
@@ -45,6 +50,9 @@ export class TeamProfileComponent {
 			flagSrc: 'flags/ukraine.svg',
 		},
 		money: 840000,
+		worldRank: 4,
+		form: '8 wins / 2 losses',
+		fanBase: '1.4M fans',
 		manager: {
 			fullName: 'Dmytro Kovalenko',
 			country: {
@@ -53,6 +61,20 @@ export class TeamProfileComponent {
 			},
 		},
 	};
+	protected readonly teamStats: TeamStat[] = [
+		{
+			label: 'World rank',
+			value: `#${this.team.worldRank}`,
+		},
+		{
+			label: 'Current form',
+			value: this.team.form,
+		},
+		{
+			label: 'Fan base',
+			value: this.team.fanBase,
+		},
+	];
 	protected readonly members: TeamMember[] = [
 		{
 			name: 'Oleksandr Marchenko',
