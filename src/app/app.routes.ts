@@ -75,20 +75,6 @@ export const routes: Routes = [
 			),
 	},
 	{
-		path: 'team-profile',
-		data: {
-			meta: {
-				...buildRouteMeta(companyProfile, '/team-profile'),
-				title: 'Team Profile',
-				description: 'Inspect your CS2 team profile, roster, manager, finances, match history, and tournament progress.',
-			},
-		},
-		loadComponent: () =>
-			import('./pages/team-profile/team-profile.component').then(
-				(m) => m.TeamProfileComponent,
-			),
-	},
-	{
 		path: 'profile',
 		data: {
 			meta: {

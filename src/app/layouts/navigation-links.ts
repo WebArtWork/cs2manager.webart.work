@@ -36,10 +36,4 @@ export const primaryNavigationLinks: readonly NavigationLink[] = [
 		label: 'Gameplay',
 		path: '/gameplay',
 	},
-	{
-		ariaLabel: 'Team profile',
-		icon: 'shield',
-		label: 'Team',
-		path: '/team-profile',
-	},
 ];

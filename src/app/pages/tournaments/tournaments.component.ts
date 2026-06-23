@@ -1,39 +1,73 @@
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { ButtonComponent, ModalService } from '@wawjs/ngx-ui';
 import { tournaments as staticTournaments } from './tournament.data';
-import { TournamentFormModalComponent } from './tournament-form-modal.component';
 
-interface Tournament {
-	id: number;
-	name: string;
+interface TournamentStat {
+	label: string;
+	value: string;
 }
 
+interface FeaturedTournament {
+	id: number;
+	name: string;
+	pictureSrc: string;
+	stats: TournamentStat[];
+}
+
+const tournamentExtras: Record<number, { pictureSrc: string; prizePool: string }> = {
+	1: {
+		pictureSrc: 'tournaments/eastern-open.svg',
+		prizePool: '$120K',
+	},
+	2: {
+		pictureSrc: 'tournaments/dust-league.svg',
+		prizePool: '$80K',
+	},
+	3: {
+		pictureSrc: 'tournaments/practice-cup.svg',
+		prizePool: '$25K',
+	},
+};
+
 @Component({
-	imports: [ButtonComponent, RouterLink],
+	imports: [NgOptimizedImage, RouterLink],
 	templateUrl: './tournaments.component.html',
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TournamentsComponent {
-	private readonly _modalService = inject(ModalService);
-	private readonly _nextTournamentId = signal(4);
+	protected readonly featuredTournaments: FeaturedTournament[] = staticTournaments.map(
+		(tournament) => {
+			const winner = tournament.teams.find((team) => team.winner);
+			const extras = tournamentExtras[tournament.id];
 
-	protected readonly tournaments = signal<Tournament[]>(
-		staticTournaments.map(({ id, name }) => ({ id, name })),
+			return {
+				id: tournament.id,
+				name: tournament.name,
+				pictureSrc: extras.pictureSrc,
+				stats: [
+					{
+						label: 'Start time',
+						value: tournament.startTime,
+					},
+					{
+						label: 'End time',
+						value: tournament.endTime,
+					},
+					{
+						label: 'Teams',
+						value: `${tournament.teams.length} teams`,
+					},
+					{
+						label: 'Winner',
+						value: winner?.name ?? 'Not decided',
+					},
+					{
+						label: 'Prize pool',
+						value: extras.prizePool,
+					},
+				],
+			};
+		},
 	);
-	protected readonly tournamentCount = computed(() => this.tournaments().length);
-
-	protected openCreateTournament() {
-		this._modalService.small({
-			component: TournamentFormModalComponent,
-			panelClass: 'max-w-lg',
-			onCreate: (name: string) => this.addTournament(name),
-		});
-	}
-
-	private addTournament(name: string) {
-		const id = this._nextTournamentId();
-		this._nextTournamentId.set(id + 1);
-		this.tournaments.update((tournaments) => [{ id, name }, ...tournaments]);
-	}
 }
