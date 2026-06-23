@@ -40,7 +40,7 @@ export class TeamsComponent {
 					value: '$42K / month',
 				},
 				{
-					label: 'Manager active',
+					label: 'Manager activity',
 					value: 'High',
 				},
 			],
@@ -66,7 +66,7 @@ export class TeamsComponent {
 					value: '$31K / month',
 				},
 				{
-					label: 'Manager active',
+					label: 'Manager activity',
 					value: 'High',
 				},
 			],
@@ -92,7 +92,7 @@ export class TeamsComponent {
 					value: '$26K / month',
 				},
 				{
-					label: 'Manager active',
+					label: 'Manager activity',
 					value: 'Medium',
 				},
 			],
@@ -118,7 +118,7 @@ export class TeamsComponent {
 					value: '$22K / month',
 				},
 				{
-					label: 'Manager active',
+					label: 'Manager activity',
 					value: 'Medium',
 				},
 			],
@@ -144,7 +144,7 @@ export class TeamsComponent {
 					value: '$18K / month',
 				},
 				{
-					label: 'Manager active',
+					label: 'Manager activity',
 					value: 'Low',
 				},
 			],
