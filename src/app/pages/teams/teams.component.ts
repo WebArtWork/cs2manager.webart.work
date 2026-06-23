@@ -1,12 +1,5 @@
 import { NgOptimizedImage } from '@angular/common';
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
-import { ButtonComponent, ModalService } from '@wawjs/ngx-ui';
-import { TeamFormModalComponent } from './team-form-modal.component';
-
-interface Team {
-	id: number;
-	name: string;
-}
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 interface TeamStat {
 	label: string;
@@ -14,24 +7,11 @@ interface TeamStat {
 }
 
 @Component({
-	imports: [ButtonComponent, NgOptimizedImage],
+	imports: [NgOptimizedImage],
 	templateUrl: './teams.component.html',
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TeamsComponent {
-	private readonly _modalService = inject(ModalService);
-	private readonly _nextTeamId = signal(4);
-
-	protected readonly teams = signal<Team[]>([
-		{
-			id: 2,
-			name: 'Inferno Syndicate',
-		},
-		{
-			id: 3,
-			name: 'Ancient Five',
-		},
-	]);
 	protected readonly featuredTeam = {
 		name: 'Navi',
 		pictureSrc: 'profile/team-badge.svg',
@@ -50,19 +30,4 @@ export class TeamsComponent {
 			},
 		] satisfies TeamStat[],
 	};
-	protected readonly teamCount = computed(() => this.teams().length);
-
-	protected openCreateTeam() {
-		this._modalService.small({
-			component: TeamFormModalComponent,
-			panelClass: 'max-w-lg',
-			onCreate: (name: string) => this.addTeam(name),
-		});
-	}
-
-	private addTeam(name: string) {
-		const id = this._nextTeamId();
-		this._nextTeamId.set(id + 1);
-		this.teams.update((teams) => [{ id, name }, ...teams]);
-	}
 }
