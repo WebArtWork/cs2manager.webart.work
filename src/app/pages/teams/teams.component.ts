@@ -35,6 +35,14 @@ export class TeamsComponent {
 					label: 'Fan base',
 					value: '1.4M fans',
 				},
+				{
+					label: 'Manager salary',
+					value: '$42K / month',
+				},
+				{
+					label: 'Manager active',
+					value: 'High',
+				},
 			],
 		},
 		{
@@ -52,6 +60,14 @@ export class TeamsComponent {
 				{
 					label: 'Fan base',
 					value: '820K fans',
+				},
+				{
+					label: 'Manager salary',
+					value: '$31K / month',
+				},
+				{
+					label: 'Manager active',
+					value: 'High',
 				},
 			],
 		},
@@ -71,6 +87,14 @@ export class TeamsComponent {
 					label: 'Fan base',
 					value: '640K fans',
 				},
+				{
+					label: 'Manager salary',
+					value: '$26K / month',
+				},
+				{
+					label: 'Manager active',
+					value: 'Medium',
+				},
 			],
 		},
 		{
@@ -89,6 +113,14 @@ export class TeamsComponent {
 					label: 'Fan base',
 					value: '510K fans',
 				},
+				{
+					label: 'Manager salary',
+					value: '$22K / month',
+				},
+				{
+					label: 'Manager active',
+					value: 'Medium',
+				},
 			],
 		},
 		{
@@ -106,6 +138,14 @@ export class TeamsComponent {
 				{
 					label: 'Fan base',
 					value: '390K fans',
+				},
+				{
+					label: 'Manager salary',
+					value: '$18K / month',
+				},
+				{
+					label: 'Manager active',
+					value: 'Low',
 				},
 			],
 		},
