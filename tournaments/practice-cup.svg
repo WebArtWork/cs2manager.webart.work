@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="Practice Cup tournament badge">
+	<rect width="320" height="320" rx="48" fill="#111827"/>
+	<path d="M86 88h148v52c0 50-29 91-74 114-45-23-74-64-74-114V88z" fill="#16a34a"/>
+	<path d="M116 116h88v30c0 35-17 61-44 78-27-17-44-43-44-78v-30z" fill="#052e16"/>
+	<path d="M126 92h68v36h-68zM112 74h96v24h-96z" fill="#bbf7d0"/>
+	<path d="M146 142h28v70h-28zM126 162h68v28h-68z" fill="#f8fafc"/>
+</svg>

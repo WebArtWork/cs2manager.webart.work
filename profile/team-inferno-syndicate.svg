@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="Inferno Syndicate badge">
+	<rect width="320" height="320" rx="48" fill="#171717"/>
+	<path d="M160 38 258 88l-12 112-86 82-86-82L62 88l98-50z" fill="#dc2626"/>
+	<path d="M160 72 224 106l-8 78-56 58-56-58-8-78 64-34z" fill="#111827"/>
+	<path d="M160 88c32 38 49 67 49 96 0 29-22 50-49 50s-49-21-49-50c0-29 17-58 49-96z" fill="#f97316"/>
+	<path d="M160 128c19 23 30 41 30 59 0 18-13 30-30 30s-30-12-30-30c0-18 11-36 30-59z" fill="#fde68a"/>
+</svg>

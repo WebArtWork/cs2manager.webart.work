@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="Ancient Five badge">
+	<rect width="320" height="320" rx="48" fill="#111827"/>
+	<circle cx="160" cy="160" r="106" fill="#16a34a"/>
+	<circle cx="160" cy="160" r="78" fill="#052e16"/>
+	<path d="M160 70 184 133h66l-53 39 20 64-57-39-57 39 20-64-53-39h66L160 70z" fill="#d9f99d"/>
+	<path d="M160 94 174 142h50l-41 29 16 48-39-29-39 29 16-48-41-29h50l14-48z" fill="#14532d"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="Eastern Open tournament badge">
+	<rect width="320" height="320" rx="48" fill="#111827"/>
+	<circle cx="160" cy="160" r="104" fill="#2563eb"/>
+	<circle cx="160" cy="160" r="72" fill="#0f172a"/>
+	<path d="M160 70 184 130h64l-52 38 20 62-56-38-56 38 20-62-52-38h64l24-60z" fill="#f8fafc"/>
+	<path d="M160 106 174 142h38l-31 23 12 36-33-22-33 22 12-36-31-23h38l14-36z" fill="#facc15"/>
+</svg>

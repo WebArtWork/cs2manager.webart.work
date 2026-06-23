@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="Nuke Academy badge">
+	<rect width="320" height="320" rx="48" fill="#111827"/>
+	<path d="M160 42 252 95v130l-92 53-92-53V95l92-53z" fill="#0891b2"/>
+	<path d="M160 78 220 112v82l-60 36-60-36v-82l60-34z" fill="#082f49"/>
+	<circle cx="160" cy="154" r="50" fill="#67e8f9"/>
+	<circle cx="160" cy="154" r="22" fill="#0e7490"/>
+	<path d="M160 84v42M160 182v42M90 154h42M188 154h42" stroke="#ecfeff" stroke-width="14" stroke-linecap="round"/>
+</svg>
